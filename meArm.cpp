@@ -110,6 +110,13 @@ void meArm::closeGripper() {
   delay(300);
 }
 
+//Go to home position
+void meArm::homePosition(){
+  gotoPoint(0,100,50);
+  closeGripper();
+  delay(300);
+}
+
 //Current x, y and z
 float meArm::getX() {
   return _x;

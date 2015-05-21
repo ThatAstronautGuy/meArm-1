@@ -113,19 +113,10 @@ void meArm::closeGripper() {
 
 //Go to home position
 void meArm::homePosition(){
-  //Starting points - current pos
-  float x0 = _x; 
-  float y0 = _y; 
-  float z0 = _z;
-  float dist = sqrt((x0-0)*(x0-0)+(y0-100)*(y0-100)+(z0-50)*(z0-50));
-  int step = 10;
-  for (int i = 0; i<dist; i+= step) {
-    goDirectlyTo(x0 + (0-x0)*i/dist, y0 + (100-y0) * i/dist, z0 + (50-z0) * i/dist);
-    delay(50);
-  }
-  goDirectlyTo(0, 100, 50);
+  gotoPoint(0, 100, 50);
   delay(50);
-  _gripper.write(90);
+  _gripper.write(105);
+  delay(50);
 }
 
 //Current x, y and z

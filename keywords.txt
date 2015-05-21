@@ -18,6 +18,7 @@ closeGripper	KEYWORD2
 gotoPoint	KEYWORD2
 goDirectlyTo	KEYWORD2
 isReachable	KEYWORD2
+homePosition KEYWORD2
 getX	KEYWORD2
 getY	KEYWORD2
 getZ	KEYWORD2

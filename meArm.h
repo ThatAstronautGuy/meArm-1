@@ -8,6 +8,7 @@
  *   arm.closeGripper();
  *   arm.gotoPoint(70, 200, 10);
  *   arm.openGripper();
+ *   arm.homePosition();
  */
 #ifndef MEARM_H
 #define MEARM_H
@@ -40,8 +41,8 @@ class meArm {
     void openGripper();
     //Let go of something
     void closeGripper();
-	//Go to home position
-	void homePosition();
+    //Go to home position
+    void homePosition();
     //Check to see if possible
     bool isReachable(float x, float y, float z);
     //Current x, y and z
